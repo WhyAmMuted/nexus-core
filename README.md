@@ -1,10 +1,5 @@
 # AudioNimbus
 
-
-[![Crates.io](https://img.shields.io/crates/v/audionimbus.svg)](https://crates.io/crates/audionimbus)
-[![Documentation](https://docs.rs/audionimbus/badge.svg)](https://docs.rs/audionimbus)
-[![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](#license)
-
 A Rust wrapper around [Steam Audio](https://valvesoftware.github.io/steam-audio/) that provides spatial audio capabilities for games and VR applications.
 It simulates realistic sound propagation, including physics-based occlusion, reflections, reverb, HRTF, and more.
 
@@ -35,6 +30,8 @@ To get started integrating `audionimbus` into your project, check out [the examp
 ## Documentation
 
 Documentation is available at [docs.rs](https://docs.rs/audionimbus/latest).
+**In this fork Bevy/FMod/Wwise integrations has been deleted FOREVER!**
+*thx*
 
 ## Project Structure
 
