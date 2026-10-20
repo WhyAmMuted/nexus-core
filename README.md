@@ -1,5 +1,6 @@
 # AudioNimbus
 
+
 [![Crates.io](https://img.shields.io/crates/v/audionimbus.svg)](https://crates.io/crates/audionimbus)
 [![Documentation](https://docs.rs/audionimbus/badge.svg)](https://docs.rs/audionimbus)
 [![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](#license)
@@ -13,8 +14,6 @@ It simulates realistic sound propagation, including physics-based occlusion, ref
 * **Reflections & reverb**: Simulates how sound waves reflect off surrounding geometry to create realistic acoustics.
 * **Head-Related Transfer Function (HRTF)**: Simulates how the listener's head and ears shape incoming sound to convey direction and distance.
 * **Ambisonics & surround sound**: Encodes spatial information across multiple audio channels to reproduce directional sound fields.
-
-AudioNimbus can integrate with FMOD Studio, Wwise, and Bevy.
 
 For a demonstration of AudioNimbus' capabilities, watch [the walkthrough video](https://www.youtube.com/watch?v=zlhW1maG0Is) or run [the demos](audionimbus/examples).
 

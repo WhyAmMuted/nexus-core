@@ -2,10 +2,6 @@ use std::path::{Path, PathBuf};
 
 #[cfg(feature = "auto-install")]
 mod auto_install;
-#[cfg(feature = "fmod")]
-mod fmod;
-#[cfg(feature = "wwise")]
-mod wwise;
 
 const PHONON_HEADER_PATH: &str = "steam-audio/core/src/core/phonon.h";
 
@@ -32,22 +28,6 @@ fn main() {
 
     emit_manual_link_search_path();
     generate_bindings_phonon(&out_dir.join("phonon.rs"), &version, out_dir, &system_flags);
-
-    #[cfg(feature = "fmod")]
-    fmod::generate_bindings(
-        &out_dir.join("phonon_fmod.rs"),
-        &version,
-        out_dir,
-        &system_flags,
-    );
-
-    #[cfg(feature = "wwise")]
-    wwise::generate_bindings(
-        &out_dir.join("phonon_wwise.rs"),
-        &version,
-        out_dir,
-        &system_flags,
-    );
 }
 
 /// Emits the configured manual library search path.

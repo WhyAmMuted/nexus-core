@@ -6,9 +6,6 @@ use crate::error::{SteamAudioError, to_option_error};
 use std::hash::{Hash, Hasher};
 use std::sync::{LazyLock, Mutex};
 
-#[cfg(feature = "bevy")]
-use bevy::prelude::Resource;
-
 /// A static mutex used to serialize HRTF creation across threads.
 ///
 /// Steam Audio's `iplHRTFCreate()` function is not thread-safe, so this lock
@@ -25,7 +22,6 @@ static HRTF_CREATION_LOCK: LazyLock<Mutex<()>> = LazyLock::new(|| Mutex::new(())
 /// incrementing a reference count.
 /// The underlying object is destroyed when all handles are dropped.
 #[derive(Debug, PartialEq, Eq)]
-#[cfg_attr(feature = "bevy", derive(Resource))]
 pub struct Hrtf(pub(crate) audionimbus_sys::IPLHRTF);
 
 impl Hrtf {

@@ -320,15 +320,3 @@ use sealed::Sealed;
 #[cfg(feature = "wiring")]
 #[cfg_attr(docsrs, doc(cfg(feature = "wiring")))]
 pub mod wiring;
-
-#[cfg(feature = "fmod")]
-#[cfg_attr(docsrs, doc(cfg(feature = "fmod")))]
-pub mod fmod;
-
-#[cfg(feature = "wwise")]
-#[cfg_attr(docsrs, doc(cfg(feature = "wwise")))]
-pub mod wwise;
-
-#[cfg(feature = "bevy")]
-#[cfg_attr(docsrs, doc(cfg(feature = "bevy")))]
-pub mod bevy;
